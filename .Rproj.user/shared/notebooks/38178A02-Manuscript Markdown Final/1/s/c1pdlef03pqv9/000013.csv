@@ -1,0 +1,2 @@
+"0",""
+"0","missing_columns <- colnames(dat)[apply(dat, 2, function(x) any(is.na(x)))]"

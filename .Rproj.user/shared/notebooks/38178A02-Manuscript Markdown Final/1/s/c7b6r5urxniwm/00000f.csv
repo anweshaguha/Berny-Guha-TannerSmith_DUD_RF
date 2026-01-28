@@ -1,0 +1,8 @@
+"0","fitted_rf_model <- rforest$finalModel #pull ranger model from rforest list"
+"0",""
+"0","prepped_recipe <- prep(blueprint, training = dat)"
+"1","[1m[33mError[39m in `step_impute_bag()`:[22m
+[1mCaused by error in `prep()`:[22m
+[33m![39m `seed_val` must be a whole number, not an integer vector.
+[90mRun `]8;;x-r-run:rlang::last_trace()rlang::last_trace()]8;;` to see where the error occurred.[39m
+"
