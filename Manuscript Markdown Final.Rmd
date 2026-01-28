@@ -1,6 +1,6 @@
 ---
-title: "Markdown for Berny et al. DADR Analyses"
-author: "Lauren Berny"
+title: "Markdown for Berny et al. 2026"
+author: "Lauren Berny & Anwesha Guha"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -32,7 +32,7 @@ library(renv)
 library(ranger)
 ```
 
-This code was used for the secondary data analyses reported in “Distinguishing a Drug Use Disorder from Drug Use in a High-Risk Sample of Youth: A Random Forest Classification and Explanatory Analysis,” by Lauren Berny, Anwesha Guha, and Emily Tanner-Smith (*Drug and Alcohol Dependence Reports*). ****Link DOI if available by time we upload to GitHub****
+This code was used for the secondary data analyses reported in “Distinguishing a Drug Use Disorder from Drug Use in a High-Risk Sample of Youth: A Random Forest Classification and Explanatory Analysis,” by Lauren Berny, Anwesha Guha, and Emily Tanner-Smith (*Drug and Alcohol Dependence Reports*). Please cite the published article when using or referencing this code: https://doi.org/10.1016/j.dadr.2026.100412.
 
 # Packages Loaded
 
@@ -50,11 +50,11 @@ All final objects in **Workspace_DADR - Berny et al.RData** correspond to the re
 # Data & Workspace
 
 ```{r}
-DS1 <- import(here("36769-0001-Data.dta")) #baseline dataset (ICPSR)
+DS1 <- import(here("36769-0001-Data.dta")) #baseline dataset (see ICPSR)
 
-DS2 <- import(here("36769-0002-Data.dta")) #youth dataset (ICPSR)
+DS2 <- import(here("36769-0002-Data.dta")) #youth dataset (see ICPSR)
 
-DS3 <- import(here("36769-0003-Data.dta")) #young adult dataset (ICPSR)
+DS3 <- import(here("36769-0003-Data.dta")) #young adult dataset (see ICPSR)
 
 load("Workspace_DADR - Berny et al.RData")
 ```
@@ -1408,7 +1408,7 @@ breakdown_hc$variable[17] <- "Tempted - Made Fun of For Abstaining = 4"
 breakdown_hc$variable[55] <- "Prediction"
 
 breakdown_hc <- breakdown_hc %>% 
- mutate(label = "Simulated Case #1")
+ mutate(label = "Simulated Case")
 
 bdplot1 <- bdplot(breakdown_hc, max_features = 8) + scale_y_continuous(limits = c(.40, .65)) +
  labs(y = "Predicted Probability")
